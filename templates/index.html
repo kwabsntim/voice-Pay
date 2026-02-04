@@ -5,6 +5,8 @@
 </head>
 <body>
     <h1>Welcome to Voice Pay!</h1>
-    <h2>You are about to make a payment.</h2>
+    <h2 id="update">Tap the button to make payment.</h2>
+    <button id="micbtn">🎤Tap to speak</button>
 </body>
+<script src="{{ url_for('static', filename='voice.js') }}"></script>
 </html>
