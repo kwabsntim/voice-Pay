@@ -1,5 +1,8 @@
 //writing the function for the text to speech
 
+const micBtn = document.getElementById('micbtn');
+const update = document.getElementById('update');
+
 function speak(text){
     const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = "en-GB"; // or en-US
@@ -38,7 +41,7 @@ recognition.onerror = () => {
 };
 
 //backend logic to start payment
-function startpayment(){
+function startPayment(){
     fetch('/start-payment', { method: 'POST' })
     .then(response => response.json())
     .then(data => {
